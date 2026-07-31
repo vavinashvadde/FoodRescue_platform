@@ -1,0 +1,14 @@
+body{
+    background:#FFFDF6;
+    color:#333;
+    font-family:'Segoe UI',sans-serif;
+}
+
+.page-container{
+    padding:30px;
+}
+
+.section-title{
+    color:#D89B00;
+    font-weight:700;
+}

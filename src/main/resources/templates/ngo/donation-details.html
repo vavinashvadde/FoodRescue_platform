@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Donation Details</title>
+
+<link rel="stylesheet" href="/css/ngo/donation-details.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+
+        <div class="logo">
+
+            <i class="fa-solid fa-hand-holding-heart"></i>
+
+            <h2>NGO Panel</h2>
+
+        </div>
+
+
+        <ul>
+
+            <li>
+
+                <a href="/ngo-dashboard">
+
+                    <i class="fa-solid fa-chart-line"></i>
+                    Dashboard
+
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="/available-food">
+
+                    <i class="fa-solid fa-bowl-food"></i>
+                    Available Food
+
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="/received-food">
+
+                    <i class="fa-solid fa-box"></i>
+                    Received Food
+
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="/ngo-profile">
+
+                    <i class="fa-solid fa-user"></i>
+                    Profile
+
+                </a>
+
+            </li>
+
+			<li>
+
+			    <a href="#" onclick="logout()">
+
+			        <i class="fa-solid fa-right-from-bracket"></i>
+
+			        Logout
+
+			    </a>
+
+			</li>
+        </ul>
+
+
+    </aside>
+
+
+
+    <!-- Main -->
+
+    <main class="main-content">
+
+
+        <div class="topbar">
+
+            <h1>
+
+                <i class="fa-solid fa-circle-info"></i>
+
+                Donation Details
+
+            </h1>
+
+
+        </div>
+
+
+
+        <div class="details-card">
+
+
+            <div class="icon">
+
+                <i class="fa-solid fa-box-open"></i>
+
+            </div>
+
+
+
+            <h2 id="foodName">
+
+                Food Name
+
+            </h2>
+
+
+            <div class="details">
+
+
+                <p>
+                    <b>Restaurant:</b>
+                    <span id="restaurantName"></span>
+                </p>
+
+
+                <p>
+                    <b>Food Type:</b>
+                    <span id="foodType"></span>
+                </p>
+
+
+                <p>
+                    <b>Quantity:</b>
+                    <span id="quantity"></span>
+                </p>
+
+
+                <p>
+                    <b>Approx Meals:</b>
+                    <span id="meals"></span>
+                </p>
+
+
+                <p>
+                    <b>Status:</b>
+                    <span id="status"></span>
+                </p>
+
+
+                <p>
+                    <b>Pickup Address:</b>
+                    <span id="address"></span>
+                </p>
+
+
+                <p>
+                    <b>Expiry Time:</b>
+                    <span id="expiry"></span>
+                </p>
+
+
+                <p>
+                    <b>Instructions:</b>
+                    <span id="instructions"></span>
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+    </main>
+
+
+</div>
+
+
+
+<script src="/js/ngo/donation-details.js"></script>
+
+
+</body>
+
+</html>

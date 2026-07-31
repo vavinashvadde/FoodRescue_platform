@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+
+<title>Volunteer Dashboard | Food Rescue Platform</title>
+
+
+
+<link rel="stylesheet"
+      href="/css/volunteer/dashboard.css">
+
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+</head>
+
+
+<body>
+
+
+
+<div class="dashboard-container">
+
+
+
+<!-- ======================================
+                SIDEBAR
+======================================= -->
+
+
+<aside class="sidebar">
+
+
+<div class="logo">
+
+
+<i class="fa-solid fa-person-carry-box"></i>
+
+
+<h2>
+Volunteer Panel
+</h2>
+
+
+</div>
+
+
+
+
+<ul>
+
+
+<li class="active">
+
+
+<a href="/volunteer-dashboard">
+
+
+<i class="fa-solid fa-chart-line"></i>
+
+
+Dashboard
+
+
+</a>
+
+
+</li>
+
+
+
+
+
+<li>
+
+
+<a href="/pickups">
+
+
+<i class="fa-solid fa-truck"></i>
+
+
+Pickups
+
+
+</a>
+
+
+</li>
+
+
+
+
+
+<li>
+
+
+<a href="/delivery-history">
+
+
+<i class="fa-solid fa-clock-rotate-left"></i>
+
+
+Delivery History
+
+
+</a>
+
+
+</li>
+
+
+
+
+
+<li>
+
+
+<a href="/volunteer-profile">
+
+
+<i class="fa-solid fa-user"></i>
+
+
+Profile
+
+
+</a>
+
+
+</li>
+
+
+
+
+
+<li>
+
+
+<a href="#" onclick="logout()">
+
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+
+Logout
+
+
+</a>
+
+
+</li>
+
+
+
+</ul>
+
+
+</aside>
+
+
+
+
+
+
+<!-- ======================================
+                MAIN CONTENT
+======================================= -->
+
+
+<main class="main-content">
+
+
+
+<!-- TOP BAR -->
+
+
+<div class="topbar">
+
+
+<div>
+
+
+<h1>
+
+Welcome,
+<span id="volunteerName">
+Volunteer
+</span>
+
+</h1>
+
+
+<p>
+
+Help deliver food and create impact.
+
+</p>
+
+
+</div>
+
+
+
+<div class="profile-icon">
+
+
+<i class="fa-solid fa-user"></i>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<!-- DASHBOARD CARDS -->
+
+
+<div class="cards-container">
+
+
+<div class="card">
+
+
+<div class="card-icon">
+
+
+<i class="fa-solid fa-box"></i>
+
+
+</div>
+
+
+<div>
+
+
+<h3>
+Total Pickups
+</h3>
+
+
+<h2 id="totalPickups">
+0
+</h2>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<div class="card-icon">
+
+
+<i class="fa-solid fa-clock"></i>
+
+
+</div>
+
+
+<div>
+
+
+<h3>
+Pending Pickups
+</h3>
+
+
+<h2 id="pendingPickups">
+0
+</h2>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<div class="card-icon">
+
+
+<i class="fa-solid fa-circle-check"></i>
+
+
+</div>
+
+
+<div>
+
+
+<h3>
+Completed
+</h3>
+
+
+<h2 id="completedDeliveries">
+0
+</h2>
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="card">
+
+
+<div class="card-icon">
+
+
+<i class="fa-solid fa-user-check"></i>
+
+
+</div>
+
+
+<div>
+
+
+<h3>
+Availability
+</h3>
+
+
+<h2 id="availability">
+Available
+</h2>
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+<!-- ======================================
+        ASSIGNED DONATIONS
+======================================= -->
+
+
+<div class="section-card">
+
+
+
+<div class="section-header">
+
+
+<h2>
+
+<i class="fa-solid fa-box-open"></i>
+
+Assigned Donations
+
+</h2>
+
+
+
+</div>
+
+
+
+
+
+
+<div class="table-container">
+
+
+<table>
+
+
+<thead>
+
+
+<tr>
+
+
+<th>
+Restaurant
+</th>
+
+
+<th>
+Food
+</th>
+
+
+<th>
+Quantity
+</th>
+
+
+<th>
+Pickup Time
+</th>
+
+
+<th>
+Status
+</th>
+
+
+<th>
+Action
+</th>
+
+
+</tr>
+
+
+</thead>
+
+
+
+
+
+<tbody id="donationTableBody">
+
+
+
+<tr>
+
+
+<td colspan="6">
+
+
+Loading donations...
+
+
+</td>
+
+
+</tr>
+
+
+
+</tbody>
+
+
+
+</table>
+
+
+
+</div>
+
+
+
+</div>
+</main>
+
+
+</div>
+
+
+
+
+
+<!-- COMMON TOAST -->
+
+
+<link rel="stylesheet"
+      href="/css/common/toast.css">
+
+
+<script src="/js/common/toast.js"></script>
+
+
+
+
+
+<!-- VOLUNTEER DASHBOARD JS -->
+
+
+<script src="/js/volunteer/dashboard.js"></script>
+
+
+
+
+</body>
+
+
+</html>

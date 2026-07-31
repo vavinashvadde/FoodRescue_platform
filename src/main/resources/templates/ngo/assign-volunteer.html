@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+
+<title>Assign Volunteer | NGO Panel</title>
+
+
+
+<link rel="stylesheet"
+      href="/css/ngo/assign-volunteer.css">
+
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+</head>
+
+
+
+<body>
+
+
+
+<div class="dashboard-container">
+
+
+
+
+
+<!-- ======================================
+            SIDEBAR
+======================================= -->
+
+
+<aside class="sidebar">
+
+
+<div class="logo">
+
+
+<i class="fa-solid fa-hand-holding-heart"></i>
+
+
+<h2>
+NGO Panel
+</h2>
+
+
+</div>
+
+
+
+
+
+<ul>
+
+
+
+<li>
+
+
+<a href="/ngo-dashboard">
+
+
+<i class="fa-solid fa-chart-line"></i>
+
+
+Dashboard
+
+
+</a>
+
+
+</li>
+
+
+
+
+
+<li>
+
+
+<a href="/available-food">
+
+
+<i class="fa-solid fa-bowl-food"></i>
+
+
+Available Food
+
+
+</a>
+
+
+</li>
+
+
+
+
+
+<li>
+
+
+<a href="/received-food">
+
+
+<i class="fa-solid fa-box-open"></i>
+
+
+Received Food
+
+
+</a>
+
+
+</li>
+
+
+
+
+
+<li class="active">
+
+
+<a href="/assign-volunteer">
+
+
+<i class="fa-solid fa-user-plus"></i>
+
+
+Assign Volunteer
+
+
+</a>
+
+
+</li>
+
+
+
+
+
+<li>
+
+
+<a href="/ngo-profile">
+
+
+<i class="fa-solid fa-user"></i>
+
+
+Profile
+
+
+</a>
+
+
+</li>
+
+
+
+
+
+<li>
+
+
+<a href="#" onclick="logout()">
+
+
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+
+
+Logout
+
+
+
+</a>
+
+
+</li>
+
+
+
+</ul>
+
+
+
+</aside>
+
+
+
+
+
+
+
+<!-- ======================================
+            MAIN CONTENT
+======================================= -->
+
+
+<main class="main-content">
+
+
+
+
+
+<div class="topbar">
+
+
+<div>
+
+
+<h1>
+
+Assign Volunteer
+
+</h1>
+
+
+<p>
+
+Select an available volunteer for food pickup.
+
+</p>
+
+
+</div>
+
+
+
+<div class="profile-icon">
+
+
+<i class="fa-solid fa-users"></i>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- DONATION DETAILS CARD -->
+
+
+<div class="donation-card">
+
+
+<h2>
+
+Donation Details
+
+</h2>
+
+
+<div class="details-grid">
+
+
+<p>
+
+<b>
+Food:
+</b>
+
+<span id="foodName">
+-
+</span>
+
+
+</p>
+
+
+
+
+<p>
+
+<b>
+Restaurant:
+</b>
+
+<span id="restaurantName">
+-
+</span>
+
+
+</p>
+
+
+
+
+
+<p>
+
+<b>
+Quantity:
+</b>
+
+<span id="quantity">
+-
+</span>
+
+
+</p>
+
+
+
+
+
+<p>
+
+<b>
+Status:
+</b>
+
+<span id="donationStatus">
+-
+</span>
+
+
+</p>
+
+
+
+</div>
+
+
+</div>
+<!-- ======================================
+        AVAILABLE VOLUNTEERS
+======================================= -->
+
+
+<div class="volunteer-card">
+
+
+<div class="section-header">
+
+
+<h2>
+
+<i class="fa-solid fa-users"></i>
+
+Available Volunteers
+
+</h2>
+
+
+<p>
+
+Choose a volunteer for this donation pickup.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="table-container">
+
+
+<table>
+
+
+
+<thead>
+
+
+<tr>
+
+
+<th>
+Volunteer Name
+</th>
+
+
+
+<th>
+Phone
+</th>
+
+
+
+<th>
+City
+</th>
+
+
+
+<th>
+Availability
+</th>
+
+
+
+<th>
+Action
+</th>
+
+
+</tr>
+
+
+
+</thead>
+
+
+
+
+
+<tbody id="volunteerTableBody">
+
+
+
+<tr>
+
+
+<td colspan="5">
+
+
+Loading volunteers...
+
+
+</td>
+
+
+</tr>
+
+
+
+</tbody>
+
+
+
+</table>
+
+
+
+</div>
+
+
+
+</div>
+</main>
+
+
+
+</div>
+
+
+
+
+
+<!-- COMMON TOAST -->
+
+
+<link rel="stylesheet"
+      href="/css/common/toast.css">
+
+
+<script src="/js/common/toast.js"></script>
+
+
+
+
+
+<!-- ASSIGN VOLUNTEER JS -->
+
+
+<script src="/js/ngo/assign-volunteer.js"></script>
+
+
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,760 @@
+/* =====================================================
+                GOOGLE FONT
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* =====================================================
+                ROOT COLORS
+===================================================== */
+
+:root{
+
+    --primary:#F4B400;
+    --secondary:#FFD54F;
+    --gold:#E6A700;
+    --dark:#374151;
+    --light:#FFF9F0;
+    --white:#FFFFFF;
+    --border:#FFE082;
+
+}
+
+/* =====================================================
+                RESET
+===================================================== */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+    font-family:'Poppins',sans-serif;
+
+    transition:.3s;
+
+}
+
+body{
+
+    min-height:100vh;
+
+    background:var(--light);
+
+    color:var(--dark);
+
+}
+
+/* =====================================================
+                MAIN CONTAINER
+===================================================== */
+
+.register-container{
+
+    display:flex;
+
+    min-height:100vh;
+
+}
+
+/* =====================================================
+                LEFT PANEL
+===================================================== */
+
+.left-panel{
+
+    width:45%;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,213,79,.95),
+            rgba(244,180,0,.95),
+            rgba(230,167,0,.95)
+        ),
+        url("/images/volunteer-bg.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    color:#FFFFFF;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* =====================================================
+                OVERLAY
+===================================================== */
+
+.overlay{
+
+    width:80%;
+
+    text-align:center;
+
+}
+
+/* =====================================================
+                LOGO
+===================================================== */
+
+.logo{
+
+    margin-bottom:35px;
+
+}
+
+.logo i{
+
+    font-size:65px;
+
+    margin-bottom:15px;
+
+    color:#FFFFFF;
+
+}
+
+.logo h1{
+
+    font-size:38px;
+
+    font-weight:700;
+
+    color:#FFFFFF;
+
+}
+
+/* =====================================================
+                LEFT CONTENT
+===================================================== */
+
+.left-panel h2{
+
+    font-size:32px;
+
+    margin-bottom:15px;
+
+    font-weight:700;
+
+}
+
+.left-panel p{
+
+    font-size:16px;
+
+    line-height:1.8;
+
+    opacity:.95;
+
+}
+
+/* =====================================================
+                BENEFITS
+===================================================== */
+
+.benefits{
+
+    margin-top:35px;
+
+}
+
+.benefit{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin:18px 0;
+
+    font-size:16px;
+
+    font-weight:500;
+
+}
+
+.benefit i{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#FFFFFF;
+
+    color:#C88700;
+
+    font-size:20px;
+
+    box-shadow:0 10px 25px rgba(255,255,255,.25);
+
+}
+
+/* =====================================================
+                RIGHT PANEL
+===================================================== */
+
+.right-panel{
+
+    width:55%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+    background:#FFF9F0;
+
+}
+
+/* =====================================================
+                REGISTER CARD
+===================================================== */
+
+.register-card{
+
+    width:520px;
+
+    background:#FFFFFF;
+
+    border:1px solid var(--border);
+
+    padding:40px;
+
+    border-radius:24px;
+
+    box-shadow:0 18px 40px rgba(244,180,0,.15);
+
+    animation:fadeIn .6s ease;
+
+}
+
+.register-card h2{
+
+    text-align:center;
+
+    color:#C88700;
+
+    font-size:30px;
+
+    font-weight:800;
+
+    margin-bottom:10px;
+
+}
+
+.register-card p{
+
+    text-align:center;
+
+    color:#6B7280;
+
+    margin-bottom:30px;
+
+    line-height:1.6;
+
+}
+/* =====================================================
+                INPUT GROUP
+===================================================== */
+
+.input-group{
+
+    margin-bottom:20px;
+
+}
+
+.input-group label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    color:#374151;
+
+}
+
+/* =====================================================
+                INPUT BOX
+===================================================== */
+
+.input-box{
+
+    display:flex;
+
+    align-items:center;
+
+    padding:0 15px;
+
+    border:1px solid var(--border);
+
+    border-radius:14px;
+
+    background:#FFFFFF;
+
+    transition:.3s;
+
+}
+
+.input-box i{
+
+    color:#C88700;
+
+    font-size:18px;
+
+    margin-right:12px;
+
+}
+
+.input-box input,
+.input-box select{
+
+    width:100%;
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    padding:15px 5px;
+
+    font-size:15px;
+
+    color:#374151;
+
+}
+
+.input-box input::placeholder{
+
+    color:#9CA3AF;
+
+}
+
+.input-box:focus-within{
+
+    border-color:#F4B400;
+
+    box-shadow:0 0 10px rgba(244,180,0,.25);
+
+}
+
+/* =====================================================
+                TEXTAREA
+===================================================== */
+
+textarea{
+
+    width:100%;
+
+    padding:15px;
+
+    resize:none;
+
+    border:1px solid var(--border);
+
+    border-radius:14px;
+
+    outline:none;
+
+    font-size:15px;
+
+    color:#374151;
+
+    background:#FFFFFF;
+
+}
+
+textarea::placeholder{
+
+    color:#9CA3AF;
+
+}
+
+textarea:focus{
+
+    border-color:#F4B400;
+
+    box-shadow:0 0 10px rgba(244,180,0,.25);
+
+}
+
+/* =====================================================
+                REGISTER BUTTON
+===================================================== */
+
+.register-btn{
+
+    width:100%;
+
+    margin-top:15px;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    color:#FFFFFF;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    background:linear-gradient(
+        135deg,
+        #FFD54F,
+        #F4B400
+    );
+
+    box-shadow:0 12px 28px rgba(244,180,0,.20);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.register-btn i{
+
+    margin-right:8px;
+
+}
+
+.register-btn:hover{
+
+    background:linear-gradient(
+        135deg,
+        #F4B400,
+        #C88700
+    );
+
+    transform:translateY(-3px);
+
+    box-shadow:0 18px 35px rgba(244,180,0,.30);
+
+}
+
+.register-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    width:0;
+
+    height:0;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.30);
+
+    transform:translate(-50%,-50%);
+
+    transition:.45s;
+
+}
+
+.register-btn:hover::before{
+
+    width:320px;
+
+    height:320px;
+
+}
+
+/* =====================================================
+                DIVIDER
+===================================================== */
+
+.divider{
+
+    display:flex;
+
+    align-items:center;
+
+    margin:25px 0;
+
+    color:#9CA3AF;
+
+}
+
+.divider::before,
+.divider::after{
+
+    content:"";
+
+    flex:1;
+
+    height:1px;
+
+    background:var(--border);
+
+}
+
+.divider span{
+
+    padding:0 15px;
+
+    font-size:14px;
+
+}
+
+/* =====================================================
+                LOGIN LINK
+===================================================== */
+
+.login-link{
+
+    text-align:center;
+
+    color:#6B7280;
+
+    margin-bottom:20px;
+
+}
+
+.login-link a{
+
+    color:#C88700;
+
+    font-weight:700;
+
+    text-decoration:none;
+
+}
+
+.login-link a:hover{
+
+    color:#E6A700;
+
+    text-decoration:underline;
+
+}
+
+/* =====================================================
+                BACK HOME
+===================================================== */
+
+.back-home{
+
+    text-align:center;
+
+}
+
+.back-home a{
+
+    text-decoration:none;
+
+    color:#6B7280;
+
+    font-size:14px;
+
+}
+
+.back-home a i{
+
+    margin-right:6px;
+
+}
+
+.back-home a:hover{
+
+    color:#C88700;
+
+}
+
+/* =====================================================
+                ANIMATIONS
+===================================================== */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* =====================================================
+                RESPONSIVE
+===================================================== */
+
+@media(max-width:1000px){
+
+    .register-container{
+
+        flex-direction:column;
+
+    }
+
+    .left-panel{
+
+        width:100%;
+
+        min-height:420px;
+
+    }
+
+    .right-panel{
+
+        width:100%;
+
+        padding:30px;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    .overlay{
+
+        width:90%;
+
+    }
+
+    .logo h1{
+
+        font-size:30px;
+
+    }
+
+    .left-panel h2{
+
+        font-size:26px;
+
+    }
+
+    .register-card{
+
+        width:100%;
+
+        padding:25px;
+
+    }
+
+    .right-panel{
+
+        padding:20px;
+
+    }
+
+}
+
+/* =====================================================
+                PREMIUM SCROLLBAR
+===================================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#FFF8E1;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(
+        #FFD54F,
+        #F4B400
+    );
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#C88700;
+
+}
+
+/* =====================================================
+                TEXT SELECTION
+===================================================== */
+
+::selection{
+
+    background:#F4B400;
+
+    color:#FFFFFF;
+
+}
+
+/* =====================================================
+                FINAL POLISH
+===================================================== */
+
+.register-card,
+.input-box,
+textarea{
+
+    transition:
+        transform .3s,
+        box-shadow .3s,
+        border-color .3s,
+        background-color .3s;
+
+}
+
+.register-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 25px 50px rgba(244,180,0,.22);
+
+}
+
+body{
+
+    animation:fadeIn .6s ease;
+
+}

@@ -1,0 +1,1007 @@
+/* ==========================================
+                GOOGLE FONT
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/* ==========================================
+                ROOT COLORS
+========================================== */
+
+:root{
+
+    --primary:#F4B400;
+    --secondary:#FFD54F;
+    --gold:#E6A700;
+    --dark:#374151;
+    --light:#FFF9F0;
+    --white:#FFFFFF;
+    --border:#FFE082;
+
+}
+
+
+/* ==========================================
+                RESET
+========================================== */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    background:var(--light);
+    overflow-x:hidden;
+    color:var(--dark);
+
+}
+
+
+/* ==========================================
+                ANIMATIONS
+========================================== */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes slideLeft{
+
+    from{
+
+        opacity:0;
+        transform:translateX(-60px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateX(0);
+
+    }
+
+}
+
+@keyframes slideTop{
+
+    from{
+
+        opacity:0;
+        transform:translateY(-30px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes zoomIn{
+
+    from{
+
+        opacity:0;
+        transform:scale(.88);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:scale(1);
+
+    }
+
+}
+
+
+/* ==========================================
+                CONTAINER
+========================================== */
+
+.container{
+
+    display:flex;
+    min-height:100vh;
+
+}
+
+
+/* ==========================================
+                SIDEBAR
+========================================== */
+
+.sidebar{
+
+    width:260px;
+    position:fixed;
+    height:100%;
+    padding:30px 0;
+
+    background:linear-gradient(
+        180deg,
+        #FFD54F,
+        #F4B400,
+        #E6A700
+    );
+
+    color:#FFFFFF;
+
+    animation:slideLeft .8s ease;
+
+    box-shadow:8px 0 25px rgba(244,180,0,.20);
+
+}
+
+.logo{
+
+    text-align:center;
+    margin-bottom:40px;
+
+}
+
+.logo i{
+
+    font-size:48px;
+    margin-bottom:12px;
+    color:#FFFFFF;
+
+}
+
+.logo h2{
+
+    font-size:25px;
+    font-weight:700;
+    color:#FFFFFF;
+
+}
+
+.sidebar ul{
+
+    list-style:none;
+
+}
+
+.sidebar ul li{
+
+    margin:10px 15px;
+
+}
+
+.sidebar ul li a{
+
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    padding:15px 18px;
+
+    text-decoration:none;
+
+    color:#FFFFFF;
+
+    border-radius:14px;
+
+    transition:.35s;
+
+    font-weight:500;
+
+}
+
+.sidebar ul li a:hover{
+
+    background:rgba(255,255,255,.18);
+
+    transform:translateX(8px);
+
+}
+
+.sidebar ul li.active a{
+
+    background:#FFFFFF;
+    color:#C88700;
+    font-weight:700;
+
+}
+
+.sidebar ul li a i{
+
+    width:22px;
+    text-align:center;
+
+}
+
+
+/* ==========================================
+                MAIN CONTENT
+========================================== */
+
+.main-content{
+
+    margin-left:260px;
+    width:100%;
+    padding:35px;
+
+}
+
+
+/* ==========================================
+                TOPBAR
+========================================== */
+
+.topbar{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:35px;
+
+    padding-bottom:18px;
+
+    border-bottom:2px solid var(--border);
+
+    animation:slideTop .8s ease;
+
+}
+
+.topbar h1{
+
+    color:#C88700;
+    font-size:34px;
+    font-weight:700;
+
+}
+
+#ngoName{
+
+    background:linear-gradient(
+        135deg,
+        #FFD54F,
+        #F4B400
+    );
+
+    color:#FFFFFF;
+
+    padding:12px 24px;
+
+    border-radius:30px;
+
+    font-weight:600;
+
+    box-shadow:0 10px 25px rgba(244,180,0,.25);
+
+}
+
+
+/* ==========================================
+                SUMMARY CARDS
+========================================== */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+    margin-bottom:35px;
+
+}
+
+.card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:#FFFFFF;
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    padding:28px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    box-shadow:0 15px 35px rgba(244,180,0,.12);
+
+    animation:zoomIn .8s ease;
+
+    transition:.35s;
+
+}
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:5px;
+
+    background:linear-gradient(
+        90deg,
+        #FFD54F,
+        #F4B400
+    );
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 22px 45px rgba(244,180,0,.22);
+
+}
+
+.card-info h3{
+
+    color:#6B7280;
+
+    font-size:15px;
+
+    margin-bottom:10px;
+
+    font-weight:500;
+
+}
+
+.card-info h2{
+
+    color:#374151;
+
+    font-size:32px;
+
+    font-weight:700;
+
+}
+
+.card i{
+
+    font-size:46px;
+
+    color:#F4B400;
+
+    transition:.35s;
+
+}
+
+.card:hover i{
+
+    transform:scale(1.15) rotate(-8deg);
+
+}
+
+
+/* ==========================================
+            CARD COLOR VARIANTS
+========================================== */
+
+.cards .card:nth-child(1)::before{
+
+    background:#22C55E;
+
+}
+
+.cards .card:nth-child(2)::before{
+
+    background:#3B82F6;
+
+}
+
+.cards .card:nth-child(3)::before{
+
+    background:#F59E0B;
+
+}
+
+.cards .card:nth-child(4)::before{
+
+    background:#A855F7;
+
+}
+
+.cards .card:nth-child(1) i{
+
+    color:#22C55E;
+
+}
+
+.cards .card:nth-child(2) i{
+
+    color:#3B82F6;
+
+}
+
+.cards .card:nth-child(3) i{
+
+    color:#F4B400;
+
+}
+
+.cards .card:nth-child(4) i{
+
+    color:#A855F7;
+
+}
+/* ==========================================
+                TABLE CONTAINER
+========================================== */
+
+.table-container{
+
+    background:#FFFFFF;
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    padding:25px;
+
+    box-shadow:0 15px 35px rgba(244,180,0,.12);
+
+    animation:fadeIn .8s ease;
+
+    overflow-x:auto;
+
+    transition:.35s;
+
+}
+
+.table-container:hover{
+
+    box-shadow:0 22px 45px rgba(244,180,0,.20);
+
+}
+
+
+/* ==========================================
+                TABLE
+========================================== */
+
+table{
+
+    width:100%;
+
+    min-width:900px;
+
+    border-collapse:collapse;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+}
+
+thead{
+
+    background:linear-gradient(
+        135deg,
+        #FFD54F,
+        #F4B400
+    );
+
+}
+
+thead th{
+
+    padding:18px;
+
+    text-align:left;
+
+    color:#FFFFFF;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    letter-spacing:.4px;
+
+}
+
+tbody tr{
+
+    transition:.35s;
+
+    animation:fadeIn .6s ease;
+
+}
+
+tbody tr:nth-child(even){
+
+    background:#FFFCF5;
+
+}
+
+tbody tr:hover{
+
+    background:#FFF8E1;
+
+}
+
+tbody td{
+
+    padding:16px;
+
+    color:#4B5563;
+
+    border-bottom:1px solid #F3F4F6;
+
+    font-size:15px;
+
+}
+
+
+/* ==========================================
+                STATUS BADGES
+========================================== */
+
+.status{
+
+    display:inline-block;
+
+    padding:8px 15px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.available{
+
+    background:#DCFCE7;
+
+    color:#15803D;
+
+}
+
+.accepted{
+
+    background:#DBEAFE;
+
+    color:#2563EB;
+
+}
+
+.completed{
+
+    background:#EDE9FE;
+
+    color:#7C3AED;
+
+}
+
+.expired{
+
+    background:#FEE2E2;
+
+    color:#DC2626;
+
+}
+
+
+/* ==========================================
+                BUTTONS
+========================================== */
+
+.accept-btn{
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    padding:10px 22px;
+
+    border-radius:10px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    color:#FFFFFF;
+
+    background:linear-gradient(
+        135deg,
+        #FFD54F,
+        #F4B400
+    );
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(244,180,0,.22);
+
+}
+
+.accept-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 18px 35px rgba(244,180,0,.30);
+
+}
+
+.accept-btn:active{
+
+    transform:scale(.96);
+
+}
+
+
+/* ==========================================
+                EMPTY STATE
+========================================== */
+
+.empty-message{
+
+    text-align:center;
+
+    padding:50px 20px;
+
+    color:#6B7280;
+
+    font-size:18px;
+
+    font-weight:500;
+
+}
+
+.empty-message i{
+
+    display:block;
+
+    font-size:70px;
+
+    margin-bottom:20px;
+
+    color:#F4B400;
+
+}
+
+
+/* ==========================================
+                LOADER
+========================================== */
+
+.loader{
+
+    width:55px;
+
+    height:55px;
+
+    margin:60px auto;
+
+    border:6px solid #FFE082;
+
+    border-top:6px solid #F4B400;
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+    100%{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+/* ==========================================
+                CUSTOM SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+    height:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#FFF8E1;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(
+        #FFD54F,
+        #F4B400
+    );
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#C88700;
+
+}
+
+
+/* ==========================================
+                ANIMATION UTILITIES
+========================================== */
+
+.fade-in{
+
+    animation:fadeIn .8s ease;
+
+}
+
+.slide-top{
+
+    animation:slideTop .8s ease;
+
+}
+
+.slide-left{
+
+    animation:slideLeft .8s ease;
+
+}
+
+.zoom-in{
+
+    animation:zoomIn .8s ease;
+
+}
+
+
+/* ==========================================
+                RESPONSIVE
+========================================== */
+
+@media(max-width:1200px){
+
+    table{
+
+        min-width:900px;
+
+    }
+
+}
+
+@media(max-width:992px){
+
+    .sidebar{
+
+        width:90px;
+
+    }
+
+    .logo h2{
+
+        display:none;
+
+    }
+
+    .sidebar ul li a span{
+
+        display:none;
+
+    }
+
+    .sidebar ul li a{
+
+        justify-content:center;
+
+        padding:16px;
+
+    }
+
+    .main-content{
+
+        margin-left:90px;
+
+        padding:25px;
+
+    }
+
+    .topbar h1{
+
+        font-size:28px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .sidebar{
+
+        display:none;
+
+    }
+
+    .main-content{
+
+        margin-left:0;
+
+        padding:20px;
+
+    }
+
+    .topbar{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:15px;
+
+    }
+
+    .cards{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .table-container{
+
+        padding:18px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .main-content{
+
+        padding:15px;
+
+    }
+
+    .topbar h1{
+
+        font-size:24px;
+
+    }
+
+    #ngoName{
+
+        padding:10px 18px;
+
+        font-size:14px;
+
+    }
+
+    .accept-btn{
+
+        width:100%;
+
+        padding:10px;
+
+    }
+
+    thead th,
+
+    tbody td{
+
+        padding:12px;
+
+        font-size:13px;
+
+    }
+
+}
+
+
+/* ==========================================
+                FINAL POLISH
+========================================== */
+
+table{
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+}
+
+.sidebar ul li a{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.sidebar ul li a::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(255,255,255,.18);
+
+    transition:.45s;
+
+}
+
+.sidebar ul li a:hover::before{
+
+    left:100%;
+
+}
+
+body{
+
+    animation:fadeIn .6s ease;
+
+}
+
+::selection{
+
+    background:#F4B400;
+
+    color:#FFFFFF;
+
+}

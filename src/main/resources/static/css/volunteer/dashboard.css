@@ -1,0 +1,1048 @@
+/* =====================================================
+                GOOGLE FONT
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* =====================================================
+                ROOT COLORS
+===================================================== */
+
+:root{
+
+    --primary:#F4B400;
+    --secondary:#FFD54F;
+    --gold:#E6A700;
+    --dark:#374151;
+    --light:#FFF9F0;
+    --white:#FFFFFF;
+    --border:#FFE082;
+
+}
+
+/* =====================================================
+                RESET
+===================================================== */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+    font-family:'Poppins',sans-serif;
+
+    transition:.3s;
+
+}
+
+body{
+
+    background:var(--light);
+
+    color:var(--dark);
+
+}
+
+/* =====================================================
+                DASHBOARD LAYOUT
+===================================================== */
+
+.dashboard-container{
+
+    display:flex;
+
+    min-height:100vh;
+
+}
+
+/* =====================================================
+                SIDEBAR
+===================================================== */
+
+.sidebar{
+
+    width:270px;
+
+    position:fixed;
+
+    top:0;
+
+    bottom:0;
+
+    left:0;
+
+    padding:25px 15px;
+
+    color:#FFFFFF;
+
+    background:linear-gradient(
+        180deg,
+        #FFD54F,
+        #F4B400,
+        #E6A700
+    );
+
+    box-shadow:8px 0 25px rgba(244,180,0,.20);
+
+    animation:slideLeft .7s ease;
+
+}
+
+/* =====================================================
+                LOGO
+===================================================== */
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:20px;
+
+    margin-bottom:30px;
+
+    border-bottom:1px solid rgba(255,255,255,.25);
+
+}
+
+.logo i{
+
+    font-size:35px;
+
+    color:#FFFFFF;
+
+}
+
+.logo h2{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#FFFFFF;
+
+}
+
+/* =====================================================
+                MENU
+===================================================== */
+
+.sidebar ul{
+
+    list-style:none;
+
+}
+
+.sidebar ul li{
+
+    margin:12px 10px;
+
+}
+
+.sidebar ul li a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    color:#FFFFFF;
+
+    text-decoration:none;
+
+    padding:15px 18px;
+
+    border-radius:14px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+}
+
+.sidebar ul li a i{
+
+    width:25px;
+
+    font-size:18px;
+
+}
+
+.sidebar ul li a:hover{
+
+    background:rgba(255,255,255,.18);
+
+    transform:translateX(8px);
+
+}
+
+.sidebar ul li.active a{
+
+    background:#FFFFFF;
+
+    color:#C88700;
+
+    box-shadow:0 10px 25px rgba(244,180,0,.20);
+
+}
+
+/* =====================================================
+                MAIN CONTENT
+===================================================== */
+
+.main-content{
+
+    margin-left:270px;
+
+    width:calc(100% - 270px);
+
+    padding:35px;
+
+    animation:fadeIn .8s ease;
+
+}
+
+/* =====================================================
+                TOPBAR
+===================================================== */
+
+.topbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+    padding-bottom:18px;
+
+    border-bottom:2px solid var(--border);
+
+}
+
+.topbar h1{
+
+    color:#C88700;
+
+    font-size:34px;
+
+    font-weight:800;
+
+}
+
+.topbar p{
+
+    color:#6B7280;
+
+    margin-top:8px;
+
+    font-weight:500;
+
+}
+
+.profile-icon{
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(
+        135deg,
+        #FFD54F,
+        #F4B400
+    );
+
+    color:#FFFFFF;
+
+    font-size:22px;
+
+    box-shadow:0 12px 28px rgba(244,180,0,.25);
+
+    animation:popIn .6s ease;
+
+}
+
+/* =====================================================
+                STAT CARDS
+===================================================== */
+
+.cards-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+.card{
+
+    background:#FFFFFF;
+
+    border:1px solid var(--border);
+
+    padding:28px;
+
+    border-radius:22px;
+
+    box-shadow:0 15px 35px rgba(244,180,0,.12);
+
+    animation:fadeUp .7s ease;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 25px 50px rgba(244,180,0,.22);
+
+}
+
+.card-icon{
+
+    width:68px;
+
+    height:68px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#FFF4CC;
+
+    color:#C88700;
+
+    font-size:28px;
+
+    margin-bottom:20px;
+
+}
+
+.card h3{
+
+    color:#6B7280;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+.card h2{
+
+    margin-top:8px;
+
+    font-size:34px;
+
+    color:#374151;
+
+    font-weight:800;
+
+}
+/* =====================================================
+                QUICK ACTIONS
+===================================================== */
+
+.actions{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+    margin-top:35px;
+
+}
+
+.action{
+
+    background:#FFFFFF;
+
+    border:1px solid var(--border);
+
+    padding:30px;
+
+    border-radius:22px;
+
+    text-decoration:none;
+
+    color:#374151;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:18px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    box-shadow:0 15px 35px rgba(244,180,0,.12);
+
+}
+
+.action:hover{
+
+    background:linear-gradient(
+        135deg,
+        #FFD54F,
+        #F4B400
+    );
+
+    color:#FFFFFF;
+
+    transform:translateY(-10px);
+
+    box-shadow:0 25px 50px rgba(244,180,0,.25);
+
+}
+
+.action i{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#FFF4CC;
+
+    color:#C88700;
+
+    font-size:30px;
+
+}
+
+.action:hover i{
+
+    background:#FFFFFF;
+
+    color:#C88700;
+
+}
+
+.action span{
+
+    font-size:16px;
+
+    font-weight:700;
+
+}
+
+/* =====================================================
+                TABLE CARD
+===================================================== */
+
+.table-card{
+
+    margin-top:35px;
+
+    background:#FFFFFF;
+
+    border:1px solid var(--border);
+
+    padding:30px;
+
+    border-radius:22px;
+
+    box-shadow:0 15px 35px rgba(244,180,0,.12);
+
+}
+
+.table-card:hover{
+
+    box-shadow:0 22px 45px rgba(244,180,0,.22);
+
+}
+
+.table-header h2{
+
+    color:#C88700;
+
+    font-size:24px;
+
+    font-weight:800;
+
+    margin-bottom:20px;
+
+}
+
+/* =====================================================
+                TABLE
+===================================================== */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+thead{
+
+    background:linear-gradient(
+        135deg,
+        #FFD54F,
+        #F4B400
+    );
+
+}
+
+thead th{
+
+    padding:18px;
+
+    text-align:left;
+
+    color:#FFFFFF;
+
+    font-weight:700;
+
+}
+
+tbody td{
+
+    padding:18px;
+
+    border-bottom:1px solid var(--border);
+
+    color:#6B7280;
+
+    font-weight:500;
+
+}
+
+tbody tr:nth-child(even){
+
+    background:#FFFDF7;
+
+}
+
+tbody tr:hover{
+
+    background:#FFF8E1;
+
+}
+
+/* =====================================================
+                STATUS BADGES
+===================================================== */
+
+.status{
+
+    display:inline-block;
+
+    padding:8px 15px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+.status.completed{
+
+    background:#FFF9E6;
+
+    color:#8A5A00;
+
+}
+
+.status.pending{
+
+    background:#FFE082;
+
+    color:#A66B00;
+
+}
+
+.status.pickup{
+
+    background:#FFF4CC;
+
+    color:#C88700;
+
+}
+
+/* =====================================================
+                ANIMATIONS
+===================================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes slideLeft{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+@keyframes popIn{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.5);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* =====================================================
+                RESPONSIVE
+===================================================== */
+
+@media(max-width:1200px){
+
+    .cards-container{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:900px){
+
+    .sidebar{
+
+        width:90px;
+
+    }
+
+    .logo h2{
+
+        display:none;
+
+    }
+
+    .sidebar ul li a span{
+
+        display:none;
+
+    }
+
+    .sidebar ul li a{
+
+        justify-content:center;
+
+    }
+
+    .main-content{
+
+        margin-left:90px;
+
+        width:calc(100% - 90px);
+
+    }
+
+}
+
+@media(max-width:700px){
+
+    .sidebar{
+
+        display:none;
+
+    }
+
+    .main-content{
+
+        margin-left:0;
+
+        width:100%;
+
+        padding:20px;
+
+    }
+
+    .cards-container,
+    .actions{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .topbar{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:20px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .topbar h1{
+
+        font-size:24px;
+
+    }
+
+    .table-card{
+
+        padding:20px;
+
+    }
+
+    thead th,
+    tbody td{
+
+        padding:12px;
+
+        font-size:13px;
+
+    }
+
+}
+
+/* =====================================================
+                PREMIUM SCROLLBAR
+===================================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#FFF8E1;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(
+        #FFD54F,
+        #F4B400
+    );
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#C88700;
+
+}
+
+/* =====================================================
+                TEXT SELECTION
+===================================================== */
+
+::selection{
+
+    background:#F4B400;
+
+    color:#FFFFFF;
+
+}
+
+/* =====================================================
+                FINAL POLISH
+===================================================== */
+
+.sidebar ul li a{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.sidebar ul li a::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(255,255,255,.18);
+
+    transition:.45s;
+
+}
+
+.sidebar ul li a:hover::before{
+
+    left:100%;
+
+}
+
+.card,
+.action,
+.table-card{
+
+    transition:
+        background-color .3s,
+        color .3s,
+        border-color .3s,
+        box-shadow .3s,
+        transform .3s;
+
+}
+
+body{
+
+    animation:fadeIn .6s ease;
+
+}
+/* ==========================================
+            COMPLETE BUTTON
+========================================== */
+
+.complete-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+
+    min-width:160px;
+    height:50px;
+    padding:0 24px;
+
+    border:none;
+    outline:none;
+    border-radius:16px;
+
+    background:linear-gradient(135deg,#FFD54F,#FFC107);
+    color:#ffffff;
+
+    font-size:16px;
+    font-weight:700;
+
+    cursor:pointer;
+    transition:all .3s ease;
+
+    box-shadow:0 8px 20px rgba(255,193,7,.35);
+}
+
+.complete-btn i{
+    font-size:18px;
+}
+
+.complete-btn:hover{
+    background:linear-gradient(135deg,#FFC107,#FFB300);
+    transform:translateY(-3px);
+    box-shadow:0 12px 28px rgba(255,193,7,.45);
+}
+
+.complete-btn:active{
+    transform:scale(.96);
+}
+
+.complete-btn:disabled{
+    background:#cfcfcf;
+    color:#777;
+    cursor:not-allowed;
+    box-shadow:none;
+    transform:none;
+}
+
+/* ==========================================
+            STATUS BADGES
+========================================== */
+
+.status-badge{
+    display:inline-block;
+    padding:7px 16px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:600;
+    text-align:center;
+}
+
+.status-badge.pending{
+    background:#FFF3CD;
+    color:#B7791F;
+}
+
+.status-badge.completed{
+    background:#D4EDDA;
+    color:#155724;
+}
+
+.status-badge.cancelled{
+    background:#F8D7DA;
+    color:#721C24;
+}
+
+/* ==========================================
+            ACTION COLUMN
+========================================== */
+
+.table-container table td:last-child{
+    text-align:center;
+}
+
+.table-container table td:last-child .complete-btn{
+    margin:auto;
+}
+
+/* ==========================================
+        RESPONSIVE
+========================================== */
+
+@media(max-width:768px){
+
+    .complete-btn{
+        min-width:130px;
+        height:44px;
+        font-size:14px;
+        padding:0 18px;
+    }
+
+    .complete-btn i{
+        font-size:16px;
+    }
+
+    .status-badge{
+        font-size:12px;
+        padding:6px 12px;
+    }
+
+}
+/*==========================================
+            PICKUP BUTTON
+==========================================*/
+
+.pickup-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+
+    width:150px;
+    height:50px;
+
+    background:linear-gradient(135deg,#FFD54F,#FFC107);
+    color:#fff;
+
+    border:none;
+    border-radius:16px;
+
+    font-size:16px;
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:all .3s ease;
+
+    box-shadow:0 8px 20px rgba(255,193,7,.35);
+}
+
+.pickup-btn:hover{
+    background:linear-gradient(135deg,#FFC107,#FFB300);
+    transform:translateY(-3px);
+    box-shadow:0 12px 28px rgba(255,193,7,.45);
+}
+
+.pickup-btn:active{
+    transform:scale(.96);
+}

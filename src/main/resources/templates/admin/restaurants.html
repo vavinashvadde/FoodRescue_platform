@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Restaurants | Food Rescue</title>
+
+<link rel="stylesheet" href="/css/admin/restaurants.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<div class="dashboard-container">
+
+
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+
+<div class="logo">
+
+<i class="fa-solid fa-shield-heart"></i>
+
+<h2>Admin Panel</h2>
+
+</div>
+
+
+
+<ul>
+
+
+<li>
+
+<a href="/admin-dashboard">
+
+<i class="fa-solid fa-chart-line"></i>
+
+Dashboard
+
+</a>
+
+</li>
+
+
+
+<li class="active">
+
+<a href="/admin-restaurants">
+
+<i class="fa-solid fa-utensils"></i>
+
+Restaurants
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="/admin-ngos">
+
+<i class="fa-solid fa-hand-holding-heart"></i>
+
+NGOs
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="/admin-volunteers">
+
+<i class="fa-solid fa-person-circle-check"></i>
+
+Volunteers
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="/admin-donations">
+
+<i class="fa-solid fa-box-open"></i>
+
+Donations
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="/admin-reports">
+
+<i class="fa-solid fa-chart-pie"></i>
+
+Reports
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="/admin-profile">
+
+<i class="fa-solid fa-user-shield"></i>
+
+Profile
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="#" onclick="logout()">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Logout
+
+</a>
+
+</li>
+
+
+
+</ul>
+
+
+</aside>
+
+
+
+
+
+
+
+<!-- MAIN CONTENT -->
+
+
+<main class="main-content">
+
+
+
+<div class="topbar">
+
+
+<div>
+
+
+<h1>
+
+<i class="fa-solid fa-utensils"></i>
+
+Restaurants
+
+</h1>
+
+
+<p>
+
+Manage registered restaurants and approvals.
+
+</p>
+
+
+</div>
+
+
+
+<div class="profile-icon">
+
+<i class="fa-solid fa-user-shield"></i>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- SUMMARY CARDS -->
+
+
+<div class="cards-container">
+
+
+<div class="card">
+
+
+<div class="card-icon">
+
+<i class="fa-solid fa-store"></i>
+
+</div>
+
+
+<div>
+
+<h3>
+Total Restaurants
+</h3>
+
+
+<h2 id="totalRestaurants">
+0
+</h2>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="card">
+
+
+<div class="card-icon">
+
+<i class="fa-solid fa-circle-check"></i>
+
+</div>
+
+
+<div>
+
+<h3>
+Active
+</h3>
+
+
+<h2 id="activeRestaurants">
+0
+</h2>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="card">
+
+
+<div class="card-icon">
+
+<i class="fa-solid fa-clock"></i>
+
+</div>
+
+
+<div>
+
+<h3>
+Pending
+</h3>
+
+
+<h2 id="pendingRestaurants">
+0
+</h2>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="card">
+
+
+<div class="card-icon">
+
+<i class="fa-solid fa-ban"></i>
+
+</div>
+
+
+<div>
+
+<h3>
+Blocked
+</h3>
+
+
+<h2 id="blockedRestaurants">
+0
+</h2>
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- RESTAURANT TABLE -->
+
+
+<div class="section-card">
+
+
+<div class="section-header">
+
+
+<h2>
+
+<i class="fa-solid fa-list"></i>
+
+Restaurant List
+
+</h2>
+
+
+<p>
+
+Review and manage restaurant accounts.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="table-container">
+
+
+<table>
+
+
+<thead>
+
+
+<tr>
+
+<th>
+Restaurant Name
+</th>
+
+
+<th>
+Owner
+</th>
+
+
+<th>
+Phone
+</th>
+
+
+<th>
+City
+</th>
+
+
+<th>
+License Number
+</th>
+
+
+<th>
+Status
+</th>
+
+
+<th>
+Action
+</th>
+
+
+</tr>
+
+
+</thead>
+
+
+
+
+
+<tbody id="restaurantTable">
+
+
+<tr>
+
+<td colspan="7">
+
+Loading restaurants...
+
+</td>
+
+</tr>
+
+
+</tbody>
+
+
+
+</table>
+
+
+</div>
+
+
+</div>
+
+</main>
+
+
+
+</div>
+
+]
+<script src="/js/common/toast.js"></script>
+
+<script src="/js/admin/restaurants.js"></script>
+
+
+</body>
+
+</html>

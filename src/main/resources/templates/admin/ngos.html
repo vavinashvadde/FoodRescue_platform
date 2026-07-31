@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin NGOs | Food Rescue</title>
+
+<link rel="stylesheet" href="/css/admin/ngos.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<div class="dashboard-container">
+
+
+
+<!-- ================= SIDEBAR ================= -->
+
+
+<aside class="sidebar">
+
+
+<div class="logo">
+
+<i class="fa-solid fa-shield-heart"></i>
+
+<h2>Admin Panel</h2>
+
+</div>
+
+
+
+<ul>
+
+
+<li>
+
+<a href="/admin-dashboard">
+
+<i class="fa-solid fa-chart-line"></i>
+
+Dashboard
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="/admin-restaurants">
+
+<i class="fa-solid fa-utensils"></i>
+
+Restaurants
+
+</a>
+
+</li>
+
+
+
+
+<li class="active">
+
+<a href="/admin-ngos">
+
+<i class="fa-solid fa-hand-holding-heart"></i>
+
+NGOs
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="/admin-volunteers">
+
+<i class="fa-solid fa-person-circle-check"></i>
+
+Volunteers
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="/admin-donations">
+
+<i class="fa-solid fa-box-open"></i>
+
+Donations
+
+</a>
+
+</li>
+
+
+
+
+
+<li>
+
+<a href="/admin-reports">
+
+<i class="fa-solid fa-chart-pie"></i>
+
+Reports
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="/admin-profile">
+
+<i class="fa-solid fa-user-shield"></i>
+
+Profile
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="#" onclick="logout()">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Logout
+
+</a>
+
+</li>
+
+
+
+</ul>
+
+
+</aside>
+
+
+
+
+
+
+
+<!-- ================= MAIN CONTENT ================= -->
+
+
+<main class="main-content">
+
+
+
+
+
+<div class="topbar">
+
+
+<div>
+
+
+<h1>
+
+<i class="fa-solid fa-hand-holding-heart"></i>
+
+NGOs
+
+</h1>
+
+
+<p>
+
+Manage registered NGOs and approval requests.
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="profile-icon">
+
+<i class="fa-solid fa-user-shield"></i>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= CARDS ================= -->
+
+
+<div class="cards-container">
+
+
+
+<div class="card">
+
+
+<div class="card-icon">
+
+<i class="fa-solid fa-building"></i>
+
+</div>
+
+
+<h3>
+Total NGOs
+</h3>
+
+
+<h2 id="totalNgos">
+0
+</h2>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<div class="card-icon">
+
+<i class="fa-solid fa-circle-check"></i>
+
+</div>
+
+
+<h3>
+Active
+</h3>
+
+
+<h2 id="activeNgos">
+0
+</h2>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<div class="card-icon">
+
+<i class="fa-solid fa-clock"></i>
+
+</div>
+
+
+<h3>
+Pending
+</h3>
+
+
+<h2 id="pendingNgos">
+0
+</h2>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<div class="card-icon">
+
+<i class="fa-solid fa-ban"></i>
+
+</div>
+
+
+<h3>
+Blocked
+</h3>
+
+
+<h2 id="blockedNgos">
+0
+</h2>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= NGO TABLE ================= -->
+
+
+<div class="section-card">
+
+
+<div class="section-header">
+
+
+<h2>
+
+<i class="fa-solid fa-list"></i>
+
+NGO List
+
+</h2>
+
+
+<p>
+
+Review and manage NGO accounts.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="table-container">
+
+
+<table>
+
+
+<thead>
+
+
+<tr>
+
+<th>
+NGO Name
+</th>
+
+
+<th>
+Owner Name
+</th>
+
+
+<th>
+Phone
+</th>
+
+
+<th>
+City
+</th>
+
+
+<th>
+Registration Number
+</th>
+
+
+<th>
+Status
+</th>
+
+
+<th>
+Action
+</th>
+
+
+</tr>
+
+
+</thead>
+
+
+
+
+
+<tbody id="ngoTable">
+
+
+<tr>
+
+<td colspan="7">
+
+Loading NGOs...
+
+</td>
+
+</tr>
+
+
+</tbody>
+
+
+
+</table>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+</main>
+
+
+</div>
+
+
+
+
+
+<script src="/js/common/toast.js"></script>
+
+<script src="/js/admin/ngos.js"></script>
+
+
+</body>
+
+</html>

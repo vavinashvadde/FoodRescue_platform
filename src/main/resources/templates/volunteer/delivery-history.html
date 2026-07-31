@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delivery History | Volunteer</title>
+
+<link rel="stylesheet" href="/css/volunteer/delivery-history.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+<aside class="sidebar">
+
+<div class="logo">
+<i class="fa-solid fa-person-carry-box"></i>
+<h2>Volunteer Panel</h2>
+</div>
+
+<ul>
+
+<li>
+<a href="/volunteer-dashboard">
+<i class="fa-solid fa-chart-line"></i>
+Dashboard
+</a>
+</li>
+
+<li>
+<a href="/pickups">
+<i class="fa-solid fa-truck"></i>
+Pickups
+</a>
+</li>
+
+<li class="active">
+<a href="/delivery-history">
+<i class="fa-solid fa-clock-rotate-left"></i>
+Delivery History
+</a>
+</li>
+
+<li>
+<a href="/volunteer-profile">
+<i class="fa-solid fa-user"></i>
+Profile
+</a>
+</li>
+
+<li>
+<a href="#" onclick="logout()">
+<i class="fa-solid fa-right-from-bracket"></i>
+Logout
+</a>
+</li>
+
+</ul>
+
+</aside>
+
+
+<main class="main-content">
+
+<div class="topbar">
+
+<div>
+<h1>
+<i class="fa-solid fa-clock-rotate-left"></i>
+Delivery History
+</h1>
+
+<p>
+View your completed food deliveries.
+</p>
+</div>
+
+<div class="profile-icon">
+<i class="fa-solid fa-user"></i>
+</div>
+
+</div>
+
+
+<div class="cards-container">
+
+<div class="card">
+
+<div class="card-icon">
+<i class="fa-solid fa-box"></i>
+</div>
+
+<div>
+<h3>Total Deliveries</h3>
+<h2 id="totalDeliveries">0</h2>
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">
+<i class="fa-solid fa-utensils"></i>
+</div>
+
+<div>
+<h3>Total Meals Delivered</h3>
+<h2 id="totalMeals">0</h2>
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">
+<i class="fa-solid fa-circle-check"></i>
+</div>
+
+<div>
+<h3>Status</h3>
+<h2>Completed</h2>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="section-card">
+
+<div class="section-header">
+
+<h2>
+<i class="fa-solid fa-list-check"></i>
+Completed Deliveries
+</h2>
+
+<p>
+History of successfully delivered food donations.
+</p>
+
+</div>
+
+
+<div class="table-container">
+
+<table>
+
+<thead>
+
+<tr>
+<th>Restaurant</th>
+<th>Food</th>
+<th>Quantity</th>
+<th>NGO</th>
+<th>Delivered Date</th>
+<th>Status</th>
+</tr>
+
+</thead>
+
+
+<tbody id="historyTableBody">
+
+<tr>
+<td colspan="6">
+Loading delivery history...
+</td>
+</tr>
+
+</tbody>
+
+
+</table>
+
+</div>
+
+</div>
+
+
+</main>
+
+</div>
+
+
+<link rel="stylesheet" href="/css/common/toast.css">
+
+<script src="/js/common/toast.js"></script>
+<script src="/js/volunteer/delivery-history.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+.navbar{
+    background:linear-gradient(90deg,#F4B400,#FFD54F);
+    color:#fff;
+    box-shadow:0 5px 15px rgba(244,180,0,.2);
+}
+
+.navbar a{
+    color:#fff;
+}
+
+.navbar a:hover{
+    color:#FFF8E1;
+}

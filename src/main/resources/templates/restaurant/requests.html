@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Donations | Food Rescue Platform</title>
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Common CSS -->
+
+    <link rel="stylesheet"
+          href="/css/common/toast.css">
+
+    <!-- Page CSS -->
+
+    <link rel="stylesheet"
+          href="/css/restaurant/requests.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- =======================
+            SIDEBAR
+    ======================== -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-utensils"></i>
+
+            <h2>Food Rescue</h2>
+
+        </div>
+
+        <ul class="menu">
+
+            <li>
+
+                <a href="/restaurant-dashboard">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <span>Dashboard</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="/donate-food">
+
+                    <i class="fa-solid fa-bowl-food"></i>
+
+                    <span>Donate Food</span>
+
+                </a>
+
+            </li>
+
+            <li class="active">
+
+                <a href="/requests">
+
+                    <i class="fa-solid fa-list-check"></i>
+
+                    <span>Manage Donations</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="/donation-history">
+
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+
+                    <span>Donation History</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="/profile">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    <span>Profile</span>
+
+                </a>
+
+            </li>
+
+         
+
+            <li>
+
+                <a href="#"
+                   id="logoutBtn">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    <span>Logout</span>
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- =======================
+            CONTENT
+    ======================== -->
+
+    <main class="content">
+
+        <header class="page-header">
+
+            <div>
+
+                <h1>
+
+                    Manage Donations
+
+                </h1>
+
+                <p>
+
+                    View, edit and manage all your food donations.
+
+                </p>
+
+            </div>
+
+            <a href="/donate-food"
+               class="add-btn">
+
+                <i class="fa-solid fa-plus"></i>
+
+                New Donation
+
+            </a>
+
+        </header>
+
+        <!-- Search -->
+		
+		<div class="stats">
+
+		    <div class="stat-card">
+		        <h3 id="totalDonations">0</h3>
+		        <p>Total Donations</p>
+		    </div>
+
+		    <div class="stat-card">
+		        <h3 id="availableDonations">0</h3>
+		        <p>Available</p>
+		    </div>
+
+		    <div class="stat-card">
+		        <h3 id="acceptedDonations">0</h3>
+		        <p>Accepted</p>
+		    </div>
+
+		    <div class="stat-card">
+		        <h3 id="completedDonations">0</h3>
+		        <p>Completed</p>
+		    </div>
+
+		</div>
+
+        <div class="toolbar">
+
+            <input
+
+                    type="text"
+
+                    id="searchInput"
+
+                    placeholder="Search donation...">
+
+            <select id="statusFilter">
+
+                <option value="ALL">
+
+                    All
+
+                </option>
+
+                <option value="AVAILABLE">
+
+                    Available
+
+                </option>
+
+                <option value="ACCEPTED">
+
+                    Accepted
+
+                </option>
+
+                <option value="COMPLETED">
+
+                    Completed
+
+                </option>
+
+                <option value="EXPIRED">
+
+                    Expired
+
+                </option>
+
+            </select>
+
+        </div>
+
+        <!-- Donation Table -->
+
+        <div class="table-card">
+
+            <table>
+
+                <thead>
+
+                <tr>
+
+                    <th>Food</th>
+
+                    <th>Type</th>
+
+                    <th>Quantity</th>
+
+                    <th>Meals</th>
+
+                    <th>Status</th>
+
+                    <th>NGO Requests</th>
+
+                    <th>Actions</th>
+
+                </tr>
+
+                </thead>
+
+                <tbody id="donationTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+<!-- ===========================
+        VIEW MODAL
+=========================== -->
+
+<div class="modal"
+     id="viewModal">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <h2>
+
+                Donation Details
+
+            </h2>
+
+            <span
+                    class="close"
+                    id="closeView">
+
+                &times;
+
+            </span>
+
+        </div>
+
+        <div id="viewBody">
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ===========================
+        EDIT MODAL
+=========================== -->
+
+<div class="modal"
+     id="editModal">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <h2>
+
+                Edit Donation
+
+            </h2>
+
+            <span
+                    class="close"
+                    id="closeEdit">
+
+                &times;
+
+            </span>
+
+        </div>
+
+        <form id="editForm">
+
+            <input
+                    type="hidden"
+                    id="donationId">
+
+            <div class="form-group">
+
+                <label>
+
+                    Quantity
+
+                </label>
+
+                <input
+                        type="number"
+                        id="editQuantity">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>
+
+                    Expiry Time
+
+                </label>
+
+                <input
+                        type="datetime-local"
+                        id="editExpiry">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>
+
+                    Pickup Address
+
+                </label>
+
+                <textarea
+                        id="editAddress"></textarea>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>
+
+                    Special Instructions
+
+                </label>
+
+                <textarea
+                        id="editInstructions"></textarea>
+
+            </div>
+
+            <button
+                    type="submit"
+                    class="save-btn">
+
+                Save Changes
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<!-- ===========================
+        DELETE MODAL
+=========================== -->
+
+<div class="modal"
+     id="deleteModal">
+
+    <div class="modal-content delete-box">
+
+        <i class="fa-solid fa-trash"></i>
+
+        <h2>
+
+            Delete Donation?
+
+        </h2>
+
+        <p>
+
+            This action cannot be undone.
+
+        </p>
+
+        <div class="buttons">
+
+            <button id="cancelDelete">
+
+                Cancel
+
+            </button>
+
+            <button id="confirmDelete">
+
+                Delete
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="/js/common/toast.js"></script>
+
+<script src="/js/restaurant/requests.js"></script>
+
+</body>
+
+</html>

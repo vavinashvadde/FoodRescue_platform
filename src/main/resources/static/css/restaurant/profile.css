@@ -1,0 +1,714 @@
+/* =====================================================
+                    GOOGLE FONT
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* =====================================================
+                    RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:#FFF9F0;
+
+    color:#333;
+
+    overflow-x:hidden;
+
+}
+
+/* =====================================================
+                DASHBOARD LAYOUT
+===================================================== */
+
+.dashboard{
+
+    display:flex;
+
+    min-height:100vh;
+
+}
+
+/* =====================================================
+                    SIDEBAR
+===================================================== */
+
+.sidebar{
+
+    width:270px;
+
+    background:linear-gradient(
+        180deg,
+        #FFD54F 0%,
+        #F4B400 45%,
+        #E6A700 100%
+    );
+
+    color:#FFFFFF;
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    bottom:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    box-shadow:6px 0 24px rgba(0,0,0,.10);
+
+    z-index:1000;
+
+}
+
+/* =====================================================
+                    LOGO
+===================================================== */
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:28px;
+
+    border-bottom:1px solid rgba(255,255,255,.25);
+
+}
+
+.logo i{
+
+    font-size:34px;
+
+    color:#FFFFFF;
+
+}
+
+.logo h2{
+
+    font-size:25px;
+
+    font-weight:700;
+
+    color:#FFFFFF;
+
+}
+
+/* =====================================================
+                    MENU
+===================================================== */
+
+.menu{
+
+    list-style:none;
+
+    padding:25px 0;
+
+}
+
+.menu li{
+
+    margin:10px 15px;
+
+}
+
+.menu li a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    text-decoration:none;
+
+    color:#FFFFFF;
+
+    padding:15px 18px;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    font-weight:500;
+
+    transition:.35s;
+
+}
+
+.menu li a:hover{
+
+    background:rgba(255,255,255,.25);
+
+    transform:translateX(6px);
+
+    box-shadow:0 6px 18px rgba(255,255,255,.15);
+
+}
+
+.menu li.active a{
+
+    background:#FFFFFF;
+
+    color:#C88700;
+
+    font-weight:600;
+
+    box-shadow:0 8px 18px rgba(244,180,0,.30);
+
+}
+
+.menu li i{
+
+    width:22px;
+
+    text-align:center;
+
+}
+
+/* =====================================================
+                    CONTENT
+===================================================== */
+
+.content{
+
+    flex:1;
+
+    margin-left:270px;
+
+    padding:35px;
+
+    background:#FFF9F0;
+
+}
+
+/* =====================================================
+                PAGE HEADER
+===================================================== */
+
+.page-header{
+
+    margin-bottom:30px;
+
+    animation:fadeUp .6s ease;
+
+}
+
+.page-header h1{
+
+    font-size:34px;
+
+    color:#C88700;
+
+    font-weight:800;
+
+    margin-bottom:8px;
+
+}
+
+.page-header p{
+
+    color:#6B7280;
+
+    font-size:15px;
+
+}
+
+/* =====================================================
+                PROFILE CARD
+===================================================== */
+
+.profile-card{
+
+    background:#FFFFFF;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    border:1px solid #FFE082;
+
+    box-shadow:0 12px 28px rgba(244,180,0,.15);
+
+    animation:fadeUp .7s ease;
+
+    transition:.35s;
+
+}
+
+.profile-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 22px 45px rgba(244,180,0,.22);
+
+}
+
+/* =====================================================
+                PROFILE ICON
+===================================================== */
+
+.profile-icon{
+
+    width:90px;
+
+    height:90px;
+
+    margin:0 auto 30px;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        #FFD54F,
+        #F4B400
+    );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#FFFFFF;
+
+    font-size:40px;
+
+    transition:.35s;
+
+    box-shadow:0 12px 28px rgba(244,180,0,.25);
+
+}
+
+.profile-icon:hover{
+
+    transform:rotate(10deg) scale(1.08);
+
+    box-shadow:0 20px 40px rgba(244,180,0,.35);
+
+}
+/* =====================================================
+                    FORM GRID
+===================================================== */
+
+.form-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+}
+
+.full-width{
+
+    grid-column:1 / -1;
+
+}
+
+/* =====================================================
+                    FORM GROUP
+===================================================== */
+
+.form-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.form-group label{
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:#374151;
+
+    margin-bottom:8px;
+
+}
+
+/* =====================================================
+                    INPUTS
+===================================================== */
+
+.form-group input,
+.form-group textarea{
+
+    width:100%;
+
+    padding:14px 16px;
+
+    border:2px solid #E5E7EB;
+
+    border-radius:12px;
+
+    background:#FFFCF5;
+
+    outline:none;
+
+    font-size:15px;
+
+    transition:.35s;
+
+}
+
+.form-group input:hover,
+.form-group textarea:hover{
+
+    border-color:#FFD54F;
+
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+
+    border-color:#F4B400;
+
+    background:#FFFFFF;
+
+    box-shadow:0 0 0 4px rgba(244,180,0,.15);
+
+    transform:translateY(-2px);
+
+}
+
+/* =====================================================
+                    READ ONLY
+===================================================== */
+
+.form-group input[readonly]{
+
+    background:#F8F5EA;
+
+    color:#6B7280;
+
+    cursor:not-allowed;
+
+}
+
+/* =====================================================
+                    TEXTAREA
+===================================================== */
+
+.form-group textarea{
+
+    resize:vertical;
+
+    min-height:120px;
+
+}
+
+/* =====================================================
+                    PLACEHOLDER
+===================================================== */
+
+::placeholder{
+
+    color:#94A3B8;
+
+}
+
+/* =====================================================
+                    SAVE BUTTON
+===================================================== */
+
+.save-btn{
+
+    margin-top:35px;
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:linear-gradient(
+        135deg,
+        #FFD54F,
+        #F4B400
+    );
+
+    color:#FFFFFF;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    box-shadow:0 15px 35px rgba(244,180,0,.25);
+
+}
+
+.save-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 22px 45px rgba(244,180,0,.35);
+
+}
+
+.save-btn:active{
+
+    transform:scale(.98);
+
+}
+
+.save-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:0;
+
+    height:0;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.25);
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    transition:.6s;
+
+}
+
+.save-btn:hover::before{
+
+    width:350px;
+
+    height:350px;
+
+}
+
+/* =====================================================
+                    RESPONSIVE
+===================================================== */
+
+@media(max-width:992px){
+
+    .sidebar{
+
+        width:90px;
+
+    }
+
+    .logo h2{
+
+        display:none;
+
+    }
+
+    .menu li a{
+
+        justify-content:center;
+
+        font-size:0;
+
+    }
+
+    .menu li i{
+
+        font-size:18px;
+
+    }
+
+    .content{
+
+        margin-left:90px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .sidebar{
+
+        display:none;
+
+    }
+
+    .content{
+
+        margin-left:0;
+
+        padding:20px;
+
+    }
+
+    .form-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .profile-card{
+
+        padding:25px;
+
+    }
+
+    .profile-icon{
+
+        width:75px;
+
+        height:75px;
+
+        font-size:32px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .content{
+
+        padding:15px;
+
+    }
+
+    .page-header h1{
+
+        font-size:28px;
+
+    }
+
+    .profile-card{
+
+        padding:20px;
+
+    }
+
+    .save-btn{
+
+        font-size:15px;
+
+        padding:14px;
+
+    }
+
+}
+
+/* =====================================================
+                    ANIMATION
+===================================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* =====================================================
+                    SCROLLBAR
+===================================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#FFF8E1;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(
+        #FFD54F,
+        #E6A700
+    );
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#C88700;
+
+}
+
+/* =====================================================
+                    TEXT SELECTION
+===================================================== */
+
+::selection{
+
+    background:#F4B400;
+
+    color:#FFFFFF;
+
+}
+
+/* =====================================================
+                    SMOOTH TRANSITIONS
+===================================================== */
+
+*{
+
+    transition:
+        background-color .3s,
+        color .3s,
+        box-shadow .3s,
+        transform .3s;
+
+}

@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+
+<title>Pickups | Volunteer</title>
+
+
+
+<link rel="stylesheet"
+      href="/css/volunteer/pickups.css">
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+</head>
+
+
+
+<body>
+
+
+
+<div class="dashboard-container">
+
+
+
+
+
+<!-- ======================================
+                SIDEBAR
+======================================= -->
+
+
+<aside class="sidebar">
+
+
+
+<div class="logo">
+
+
+<i class="fa-solid fa-person-carry-box"></i>
+
+
+<h2>
+Volunteer Panel
+</h2>
+
+
+</div>
+
+
+
+
+
+
+<ul>
+
+
+
+<li>
+
+
+<a href="/volunteer-dashboard">
+
+
+<i class="fa-solid fa-chart-line"></i>
+
+
+Dashboard
+
+
+</a>
+
+
+</li>
+
+
+
+
+
+<li class="active">
+
+
+<a href="/pickups">
+
+
+<i class="fa-solid fa-truck"></i>
+
+
+Pickups
+
+
+</a>
+
+
+</li>
+
+
+
+
+
+<li>
+
+
+<a href="/delivery-history">
+
+
+<i class="fa-solid fa-clock-rotate-left"></i>
+
+
+Delivery History
+
+
+</a>
+
+
+</li>
+
+
+
+
+
+<li>
+
+
+<a href="/volunteer-profile">
+
+
+<i class="fa-solid fa-user"></i>
+
+
+Profile
+
+
+</a>
+
+
+</li>
+
+
+
+
+
+<li>
+
+
+<a href="#" onclick="logout()">
+
+
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+
+
+Logout
+
+
+
+</a>
+
+
+</li>
+
+
+
+</ul>
+
+
+
+
+</aside>
+
+
+
+
+
+
+
+<!-- ======================================
+                MAIN CONTENT
+======================================= -->
+
+
+<main class="main-content">
+
+
+
+
+
+<div class="topbar">
+
+
+
+<div>
+
+
+<h1>
+
+<i class="fa-solid fa-truck"></i>
+
+My Pickups
+
+</h1>
+
+
+<p>
+
+Manage assigned food pickups and deliveries.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="profile-icon">
+
+
+<i class="fa-solid fa-user"></i>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- ======================================
+            SUMMARY CARDS
+======================================= -->
+
+
+<div class="cards-container">
+
+
+
+<div class="card">
+
+
+<div class="card-icon">
+
+
+<i class="fa-solid fa-box"></i>
+
+
+</div>
+
+
+
+<div>
+
+
+<h3>
+Assigned
+</h3>
+
+
+<h2 id="assignedCount">
+0
+</h2>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+<div class="card">
+
+
+<div class="card-icon">
+
+
+<i class="fa-solid fa-clock"></i>
+
+
+</div>
+
+
+
+<div>
+
+
+<h3>
+Pending
+</h3>
+
+
+<h2 id="pendingCount">
+0
+</h2>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+<div class="card">
+
+
+<div class="card-icon">
+
+
+<i class="fa-solid fa-truck-fast"></i>
+
+
+</div>
+
+
+
+<div>
+
+
+<h3>
+Picked
+</h3>
+
+
+<h2 id="pickedCount">
+0
+</h2>
+</div>
+</div>
+</div>
+<!-- ======================================
+            PICKUP TABLE
+======================================= -->
+
+
+<div class="section-card">
+
+
+
+<div class="section-header">
+
+
+<h2>
+
+
+<i class="fa-solid fa-list-check"></i>
+
+
+Assigned Pickups
+
+
+</h2>
+
+
+<p>
+
+Food donations assigned by NGO.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="table-container">
+
+
+
+<table>
+
+
+
+<thead>
+
+
+
+<tr>
+
+
+
+<th>
+Restaurant
+</th>
+
+
+
+<th>
+Food
+</th>
+
+
+
+<th>
+Quantity
+</th>
+
+
+
+<th>
+Pickup Address
+</th>
+
+
+
+<th>
+Status
+</th>
+
+
+
+<th>
+Action
+</th>
+
+
+
+</tr>
+
+
+
+</thead>
+
+
+
+
+
+
+<tbody id="pickupTableBody">
+
+
+
+<tr>
+
+
+<td colspan="6">
+
+
+Loading pickups...
+
+
+</td>
+
+
+</tr>
+
+
+
+</tbody>
+
+
+
+
+
+</table>
+
+
+
+</div>
+
+
+
+</div>
+</main>
+
+
+
+</div>
+
+
+
+
+
+<!-- COMMON TOAST -->
+
+
+<link rel="stylesheet"
+      href="/css/common/toast.css">
+
+
+<script src="/js/common/toast.js"></script>
+
+
+
+
+
+<!-- PICKUPS JS -->
+
+
+<script src="/js/volunteer/pickups.js"></script>
+
+
+
+
+
+</body>
+
+
+</html>

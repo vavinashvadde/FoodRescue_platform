@@ -1,0 +1,650 @@
+/* =====================================================
+                    GOOGLE FONT
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* =====================================================
+                    RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#FFF9F0;
+    color:#333;
+    overflow-x:hidden;
+}
+
+/* =====================================================
+                    LAYOUT
+===================================================== */
+
+.dashboard-container{
+    display:flex;
+    min-height:100vh;
+}
+
+/* =====================================================
+                    SIDEBAR
+===================================================== */
+
+.sidebar{
+
+    width:270px;
+
+    background:linear-gradient(
+        180deg,
+        #FFD54F 0%,
+        #F4B400 45%,
+        #E6A700 100%
+    );
+
+    color:#FFFFFF;
+
+    position:fixed;
+
+    top:0;
+    left:0;
+    bottom:0;
+
+    box-shadow:6px 0 24px rgba(0,0,0,.10);
+
+    z-index:1000;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:28px;
+
+    border-bottom:1px solid rgba(255,255,255,.25);
+
+}
+
+.logo i{
+
+    font-size:34px;
+
+    color:#FFFFFF;
+
+}
+
+.logo h2{
+
+    font-size:25px;
+
+    font-weight:700;
+
+    color:#FFFFFF;
+
+}
+
+.sidebar ul{
+
+    list-style:none;
+
+    padding:25px 0;
+
+}
+
+.sidebar ul li{
+
+    margin:10px 15px;
+
+}
+
+.sidebar ul li a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:15px 18px;
+
+    color:#FFFFFF;
+
+    text-decoration:none;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.sidebar ul li a:hover{
+
+    background:rgba(255,255,255,.25);
+
+    transform:translateX(6px);
+
+    box-shadow:0 6px 18px rgba(255,255,255,.15);
+
+}
+
+.sidebar ul li.active a{
+
+    background:#FFFFFF;
+
+    color:#C88700;
+
+    font-weight:700;
+
+    box-shadow:0 8px 18px rgba(244,180,0,.30);
+
+}
+
+.sidebar ul li i{
+
+    width:24px;
+
+    text-align:center;
+
+}
+
+/* =====================================================
+                    MAIN CONTENT
+===================================================== */
+
+.main-content{
+
+    flex:1;
+
+    margin-left:270px;
+
+    padding:35px;
+
+    background:#FFF9F0;
+
+}
+
+/* =====================================================
+                    TOPBAR
+===================================================== */
+
+.topbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+}
+
+.topbar h1{
+
+    color:#C88700;
+
+    font-size:34px;
+
+    font-weight:800;
+
+}
+
+.topbar p{
+
+    color:#6B7280;
+
+    margin-top:8px;
+
+    font-size:15px;
+
+}
+
+.profile-icon{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    background:#FFFFFF;
+
+    color:#D89B00;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:22px;
+
+    box-shadow:0 8px 18px rgba(244,180,0,.20);
+
+    transition:.3s;
+
+}
+
+.profile-icon:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* =====================================================
+                    REPORT CARDS
+===================================================== */
+
+.cards-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+    margin-bottom:30px;
+
+}
+
+.second-row{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+    margin-bottom:35px;
+
+}
+
+.card{
+
+    background:#FFFFFF;
+
+    padding:28px;
+
+    border-radius:20px;
+
+    border:1px solid #FFE082;
+
+    box-shadow:0 12px 28px rgba(244,180,0,.15);
+
+    transition:.35s;
+
+    animation:fadeUp .7s ease;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 45px rgba(244,180,0,.28);
+
+}
+
+.card:nth-child(1) .card-icon{
+
+    background:#FFF8E1;
+    color:#F4B400;
+
+}
+
+.card:nth-child(2) .card-icon{
+
+    background:#E8F5E9;
+    color:#2E7D32;
+
+}
+
+.card:nth-child(3) .card-icon{
+
+    background:#E3F2FD;
+    color:#1565C0;
+
+}
+
+.card:nth-child(4) .card-icon{
+
+    background:#FCE4EC;
+    color:#AD1457;
+
+}
+
+.card-icon{
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:28px;
+
+    margin-bottom:20px;
+
+}
+
+.card h3{
+
+    color:#64748B;
+
+    font-size:16px;
+
+    font-weight:500;
+
+}
+
+.card h2{
+
+    margin-top:10px;
+
+    font-size:34px;
+
+    color:#1E293B;
+
+}
+/* =====================================================
+                    REPORT SECTION
+===================================================== */
+
+.section-card{
+
+    background:#FFFFFF;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    border:1px solid #FFE082;
+
+    box-shadow:0 12px 28px rgba(244,180,0,.15);
+
+    animation:fadeUp .9s ease;
+
+    transition:.35s;
+
+}
+
+.section-card:hover{
+
+    box-shadow:0 18px 40px rgba(244,180,0,.22);
+
+}
+
+.section-header{
+
+    margin-bottom:25px;
+
+}
+
+.section-header h2{
+
+    color:#C88700;
+
+    font-size:26px;
+
+    font-weight:700;
+
+}
+
+.section-header p{
+
+    margin-top:8px;
+
+    color:#6B7280;
+
+    font-size:15px;
+
+}
+
+/* =====================================================
+                    REPORT SUMMARY
+===================================================== */
+
+.report-box{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+}
+
+.report-box div{
+
+    background:#FFFDF7;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    border-left:5px solid #F4B400;
+
+    border:1px solid #FFE082;
+
+    transition:.3s;
+
+}
+
+.report-box div:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 12px 24px rgba(244,180,0,.18);
+
+}
+
+.report-box h3{
+
+    color:#475569;
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+.report-box p{
+
+    margin-top:15px;
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:#C88700;
+
+}
+
+/* =====================================================
+                    ANIMATION
+===================================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* =====================================================
+                    RESPONSIVE
+===================================================== */
+
+@media(max-width:1200px){
+
+    .cards-container{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .second-row{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:992px){
+
+    .sidebar{
+
+        width:90px;
+
+    }
+
+    .logo h2{
+
+        display:none;
+
+    }
+
+    .sidebar ul li a{
+
+        justify-content:center;
+
+        font-size:0;
+
+    }
+
+    .sidebar ul li i{
+
+        font-size:18px;
+
+    }
+
+    .main-content{
+
+        margin-left:90px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .sidebar{
+
+        display:none;
+
+    }
+
+    .main-content{
+
+        margin-left:0;
+
+        padding:20px;
+
+    }
+
+    .cards-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .second-row{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .report-box{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .topbar{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:20px;
+
+    }
+
+}
+
+/* =====================================================
+                    SCROLLBAR
+===================================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#FFF8E1;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(
+        #FFD54F,
+        #E6A700
+    );
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#C88700;
+
+}
+
+/* =====================================================
+                    TEXT SELECTION
+===================================================== */
+
+::selection{
+
+    background:#F4B400;
+
+    color:#FFFFFF;
+
+}
