@@ -6,7 +6,7 @@ console.log("Current URL:", window.location.href);
 console.log("Search:", window.location.search);
 console.log("Assign Volunteer JS Loaded");
 
-const BASE_URL = "http://localhost:8080/api";
+const BASE_URL = "/api";
 
 
 
