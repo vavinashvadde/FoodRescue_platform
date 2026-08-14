@@ -302,6 +302,9 @@ The Admin Dashboard provides:
 - Ajay 
 - RaviTeja
 
+
+Live Link : 
+https://foodrescue-platform.onrender.com/
 ---
 
 # 🙏 Acknowledgement
