@@ -1,4 +1,4 @@
-const BASE_URL = "/api/admin";
+const BASE_URL = "/api";
 
 document.addEventListener("DOMContentLoaded", () => {
     loadDashboard();
